@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity" />
+
+        <fragment
+            android:id="@+id/place_autocomplete_fragment"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:elevation="10sp"
+        android:id="@+id/relativeLayout1"
+        >
+
+        <!--<ImageView-->
+            <!--android:layout_width="20sp"-->
+            <!--android:layout_height="20sp"-->
+            <!--android:id="@+id/ic_magnify"-->
+            <!--android:layout_marginLeft="10sp"-->
+            <!--android:background="@drawable/search_design"-->
+            <!--android:src="@drawable/ic_magnify"-->
+            <!--/>-->
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:hint="Search Location"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:textColorHint="#000"
+            android:background="@drawable/search_design"
+            android:id="@+id/editTextSearch"
+            android:imeOptions="actionSearch"
+            />
+        <ImageButton
+            android:id="@+id/buttonCurrent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/editTextSearch"
+            android:layout_margin="15dp"
+            android:background="@drawable/ic_gps"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10sp"
+            android:scaleType="centerCrop"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayout1"
+        android:layout_alignParentTop="true"> </RelativeLayout>
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#CC020813"
+            android:orientation="horizontal">
+
+
+
+            <Button
+                android:id="@+id/buttonSetFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
+                android:text="Set From"
+                 />
+
+            <Button
+                android:id="@+id/buttonSetTo"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
+                android:text="Set To" />
+
+            <Button
+                android:id="@+id/buttonCalculate"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
+                android:text="Calc Distance" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
