@@ -415,7 +415,7 @@ public class MapsActivity extends FragmentActivity implements
         // Calculating the distance in meters
         Double distance = SphericalUtil.computeDistanceBetween(from, to);
 
-        Toast.makeText(this,String.valueOf(distance + "Meters"), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, distance + "Meters", Toast.LENGTH_SHORT).show();
 
         //Displaying the distance
 
